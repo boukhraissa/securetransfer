@@ -162,7 +162,7 @@ export async function fullSecureTransfer(file, chunkKo, onStep, onChunk) {
 
   // 2. Signature ECDSA
   onStep('ecdsa', 'Génération signature ECDSA P-256...', 'running');
-  const { signature, publicKey, r, s } = await ecdsaSign(fileHash);
+  const { signature, r, s } = await ecdsaSign(fileHash);
   onStep('ecdsa', `Signature : r=${r.slice(0,16)}... s=${s.slice(0,16)}...`, 'done');
 
   // 3. Génération clé AES + dérivation HKDF

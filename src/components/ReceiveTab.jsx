@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Antenna, Download, CheckCircle, XCircle } from 'lucide-react';
+import { Antenna, Download, CheckCircle } from 'lucide-react';
 import { randomHex, formatBytes, sleep } from '../crypto/simulation';
 import styles from './ReceiveTab.module.css';
 
